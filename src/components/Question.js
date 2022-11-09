@@ -1,8 +1,6 @@
 import React from 'react';
 
-export default function Question({ question, answer }) {
-  const [isOpen, setIsOpen] = React.useState(false);
-
+export default function Question({ question, answer, isOpen, toggleOpen }) {
   return (
     <section className="question">
 
@@ -12,7 +10,7 @@ export default function Question({ question, answer }) {
 
         <button 
           className="toggle-button"
-          onClick={() => setIsOpen(prev => !prev)}
+          onClick={toggleOpen}
         >{isOpen ? '-' : '+'}</button>
 
       </div>
